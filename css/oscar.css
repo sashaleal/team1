@@ -1,0 +1,244 @@
+/* CSS para la barra de navegacion  */
+
+header{
+    
+    left: 0;
+    top:0;
+    background-color:#0ca686;
+    height:7%;
+    width: 100%;
+    margin-bottom: 10%;
+    display:flex;
+    justify-content:space-between;
+    
+  }
+  nav{
+    display:flex;
+    align-items:center;
+    width: 600px;
+    justify-content:space-between;
+    margin-right: 5em;
+    
+  }
+  .language{
+    display:flex;
+    align-items:center;
+  }
+  .item a, p{
+    text-decoration:none;
+    color:white;
+    font-size:x-large;
+    font-weight:700;
+  }
+  .item a:hover{
+    color:#efffb8;
+  }
+
+/* CSS para el fondo y cuerpo*/
+body{
+    background-image: url(assets/images/vectorstock_1847545.png);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    margin: 0;
+}
+body h1{
+    color:#0ca686;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 6vw;
+    font-weight: bolder;
+    font-family: cursive;    
+}
+ @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #15f86c, 0 0 40px #15f86c, 0 0 50px #15f86c, 0 0 60px #15f86c, 0 0 70px #e60073;
+  }
+} 
+body h2{
+    font-size: 1.3vw;
+    text-align: center;
+}
+body p{
+  text-align: center;
+  color: black;
+}
+
+/* CSS para la parte del bio con grid*/
+
+.bio{
+ display:grid; 
+ grid-template-rows: auto auto 5em auto auto 5em;
+ grid-template-columns:auto auto auto;
+}
+.bio img{
+  width: 14vw;
+  border-radius: 30%;
+}
+.bio img:hover{
+  border-style: solid;
+  border-width: 10px;
+  border-color: #0ca686;
+  display: grid;
+  
+}
+.item{
+  justify-self: center;
+  align-self: center;
+  font-weight: 800;
+}
+.description{
+  font-family: cursive;
+  width: 50%;
+  font-size: 1vw;
+}
+.name{
+  font-size: 1.2vw;
+}
+.diagrama{
+ margin-left: 30% ;
+ border-radius: 10%;
+ width: 35%;
+}
+form{
+  margin-left: 40%;
+}
+.quote{
+  text-align: end;
+}
+/* CSS para el footer*/
+footer{
+  
+  background-color:#0ca686 ;  
+  
+  width: 100%; 
+  height:7%;
+  margin-bottom: 0;
+    
+}
+footer a{
+  text-decoration: none;
+  color: #efffb8;
+}
+footer p{
+  color: #efffb8;
+}
+footer li{
+  list-style: none;
+  font-size: 1.5em;
+  margin-left: 35%;
+}
+p{
+  width: 50%;
+  margin-left: 20%;
+}
+
+/*Oscar's Page CSS*/
+
+.container_oscar{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 33% 33% 33%;
+}
+.container_oscar img{
+  height: 100%;
+  width: 100%;
+}
+.one {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.two {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.three {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.four {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.five {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.six {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.seven {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.eight {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.nine {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.content {
+  opacity: 0;
+  font-size: 100px;
+  font-weight: bolder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: rgba(200, 200, 200, 0.5);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.content:hover {
+  opacity: 1;
+}
+

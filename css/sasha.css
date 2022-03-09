@@ -1,0 +1,186 @@
+
+main{
+  margin:20px;
+  padding:0;
+  text-align:center;
+}
+
+nav{
+  max-width:100%;
+  height: 370px;
+  background-color: #222;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+}
+
+ul{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  text-decoration: none;
+  list-style-type:none;
+}
+
+.li{
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h1{
+  font-size: 3em;
+  margin-left:40px;
+}
+
+
+/* Transition hover text blurr over image*/
+.container{
+  margin-top: 30px;
+  display: grid; 
+  grid-template-columns: 2fr 1.75fr 2.5fr 2.5fr 2.5fr; 
+  grid-template-rows: .5fr 1.25fr 0.75fr 0.5fr 0.5fr 1.05fr; 
+  grid-gap:10px;
+  grid-auto-flow: dense;
+}
+
+.gallery-item{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+.gallery-item .image{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.gallery-item .image img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position:50% 50%;
+  cursor:pointer;
+  transition:.5s ease-in-out;
+}
+.gallery-item:hover .image img{
+  transform:scale(1.5);
+}
+
+.gallery-item .text{
+  opacity:0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size:25px;
+  pointer-events:none;
+  z-index:4;
+  transition: .3s ease-in-out;
+  -webkit-backdrop-filter: blur(5px) saturate(1);
+  backdrop-filter: blur(5px) saturate(1);
+}
+
+.gallery-item:hover .text{
+  opacity:1;
+  animation: move-down .3s linear;
+  padding:2px;
+  width:100%;
+}
+
+#box1 { grid-area: 1 / 1 / 3 / 3; } 
+#box2 { grid-area: 3 / 1 / 5 / 2; } 
+#box3 { grid-area: 7 / 1 / 8 / 3; } 
+#box4 { grid-area: 5 / 1 / 7 / 4; } 
+#box5 { grid-area: 3 / 2 / 5 / 3; } 
+#box6 { grid-area: 1 / 3 / 5 / 4; } 
+#box7 { grid-area: 1 / 4 / 4 / 6; } 
+#box8 { grid-area: 4 / 5 / 8 / 6; } 
+#box9 { grid-area: 4 / 4 / 7 / 5; } 
+#box10 { grid-area: 7 / 3 / 8 / 5;} 
+
+.copyrights p{
+  width: 100%;
+  height:auto;
+  padding-left: 860px;
+}
+
+
+/* Flipping-CARD-PICTURE*/
+/* The flip card container - set the width and height to whatever you want. 
+We have added the border property to demonstrate that the flip itself goes out
+ of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  margin-left: 700px;
+  margin-top: 80px;
+  border: 0px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #222;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+  text-align: center;
+}
+ 
+}
+
+/*media*/
+@media screen and (max-width:500px){
+
+}
+
+
+@keyframes move-down{
+0%{
+  top:10%;
+}
+50%{
+  top:35%;
+}
+100%{
+  top:50%;
+}
+
+}
